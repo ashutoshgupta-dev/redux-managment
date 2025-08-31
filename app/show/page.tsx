@@ -20,16 +20,16 @@ const Show = () => {
       router.push(`/edit/${index}`)
   }
 
-  if(!isLoaded){
-    <p>loading...</p>
-  }
+  if (!isLoaded) {
+  return <p className="text-center mt-10 text-white text-xl">Loading...</p>;
+}
   
   return (
     <div className="min-h-screen bg-gradient-to-l from-indigo-400 via-purple-700 to-pink-600 w-full">
-      <div className="grid lg:grid-cols-4  sm:grid-cols-3  gap-4 p-4 max-w-[1300px] mx-auto">
+      <div className="grid grid-cols-1 lg:grid-cols-4 md:grid-cols-3  sm:grid-cols-2  gap-4 p-4 max-w-[1300px] mx-auto">
        {
               users.map((user,ind)=>(
-              <div key={ind} className="bg-gray-200 shadow-xl text-[1.2rem] py-5 px-5 rounded-2xl wrap-break-word">
+              <div key={ind} className="bg-gray-200 shadow-xl text-[1.2rem] py-5 px-5 rounded-2xl break-words">
                      <p>Name:{user.name}</p>
                      <p>Email:{user.email}</p>
                      <p>country:{country}</p>
