@@ -16,7 +16,7 @@ const Show = () => {
   const handledel=(index:number)=>{
       dispatch(delUser(index))
   }
-  const handelEdit=(index:number)=>{
+  const handleEdit=(index:number)=>{
       router.push(`/edit/${index}`)
   }
 
@@ -35,7 +35,7 @@ const Show = () => {
                      <p>country:{country}</p>
                      <div className="flex gap-2 mt-4">
                           <Button variant={"destructive"} className="flex-1 font-bold  text-white" onClick={()=>handledel(ind)}><DeleteIcon/></Button>
-                          <Button variant={"outline"} className="flex-1 bg-amber-600" onClick={()=>handelEdit(ind)}>
+                          <Button variant={"outline"} className="flex-1 bg-amber-600" onClick={()=>handleEdit(ind)}>
                             <span><LucideEdit/></span>Edit
                           </Button>
                      </div>

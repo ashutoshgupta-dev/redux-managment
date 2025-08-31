@@ -27,14 +27,16 @@ export default function RootLayout({
 }>) {
   return (
    <ClerkProvider afterSignOutUrl="/">
-      <ReduxProvider>
+      
         <html lang="en">
           <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+              <ReduxProvider>
               <NavBar/>
               {children}
+               </ReduxProvider>
           </body>
         </html>
-    </ReduxProvider>
+
    </ClerkProvider>
   );
 }

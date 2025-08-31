@@ -10,7 +10,7 @@ import { SignedOut, SignInButton, SignUpButton, SignedIn, UserButton } from "@cl
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
    const { isSignedIn, user, isLoaded } = useUser();
-    if (!isLoaded) return null;
+    // if (!isLoaded) return null;
     // const pathName=usePathname();
   return (
     <nav className="w-full  bg-gradient-to-r from-indigo-600  via-red-400 to-pink-700">
